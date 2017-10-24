@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A5226A81-5663-46A1-A728-6A19F6508C77}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PatternsLearning</RootNamespace>
+    <AssemblyName>PatternsLearning</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DecoratorPattern\AbstractClasses\Component.cs" />
+    <Compile Include="DecoratorPattern\AbstractClasses\Decorator.cs" />
+    <Compile Include="DecoratorPattern\ConcreteClasses\ConcreteComponent.cs" />
+    <Compile Include="DecoratorPattern\ConcreteClasses\ConcreteDecoratorA.cs" />
+    <Compile Include="DecoratorPattern\ConcreteClasses\ConcreteDecoratorB.cs" />
+    <Compile Include="ObserverPattern\AbstractClasses\IObservable.cs" />
+    <Compile Include="ObserverPattern\AbstractClasses\IObserver.cs" />
+    <Compile Include="ObserverPattern\AbstractClasses\Observable Actions\IDisplay.cs" />
+    <Compile Include="ObserverPattern\Concrete Classes\ConsoleWheaterViewer.cs" />
+    <Compile Include="ObserverPattern\Concrete Classes\PhoneWeatherViewer.cs" />
+    <Compile Include="ObserverPattern\Concrete Classes\WeatherStation.cs" />
+    <Compile Include="ObserverPattern\ExampleObserverPattern.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strategy Pattern\AbstractClasses\Behaviours\IDisplayBehaviour.cs" />
+    <Compile Include="Strategy Pattern\AbstractClasses\Behaviours\IFlyBehaviour.cs" />
+    <Compile Include="Strategy Pattern\AbstractClasses\Behaviours\IQuackBehaviour.cs" />
+    <Compile Include="Strategy Pattern\ConcreteClasses\ConcreteBehaviours\LoudQuack.cs" />
+    <Compile Include="Strategy Pattern\ConcreteClasses\ConcreteBehaviours\SimpleFly.cs" />
+    <Compile Include="Strategy Pattern\ConcreteClasses\ConcreteBehaviours\SimpleQuack.cs" />
+    <Compile Include="Strategy Pattern\ConcreteClasses\ConcreteBehaviours\TerminalDisplay.cs" />
+    <Compile Include="Strategy Pattern\ConcreteClasses\ConcreteDucks\LoudRiverDuck.cs" />
+    <Compile Include="Strategy Pattern\ConcreteClasses\ConcreteDucks\MountainDuck.cs" />
+    <Compile Include="Strategy Pattern\AbstractClasses\Duck.cs" />
+    <Compile Include="Strategy Pattern\ExampleStrategyPattern.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
